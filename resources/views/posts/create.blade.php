@@ -24,7 +24,7 @@
 
 <div class="form-group">
       {{Form::label('body', 'Discriptions')}}
-      {{Form::textarea('body','',['class'=>'form-control' ,'id'=>'article-ckeditor']) }}
+      {{Form::textarea('body','',['class'=>'form-control']) }}
     </div>
  
 <div class="form-group">
