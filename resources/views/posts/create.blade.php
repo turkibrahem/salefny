@@ -26,11 +26,13 @@
       {{Form::label('body', 'Discriptions')}}
       {{Form::textarea('body','',['class'=>'form-control' ,'id'=>'article-ckeditor']) }}
     </div>
+
+   
  
-{{--  <div class="form-group">
+<div class="form-group">
       
-      {{Form::file('post_image','',['class'=>'form-control' ]) }}
-    </div>     --}}
+      {{Form::file('post_image', ['class'=>'btn ' ]) }}
+    </div>   
  
 {{Form::submit('Create',['class'=>'btn btn-primary btn-lg' ] ) }}
 
