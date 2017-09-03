@@ -12,27 +12,27 @@
       {{Form::label('subject', 'Subject')}}
       {{Form::text('subject','' , ['class'=>'form-control'] ) }}
     </div>
-{{--  <div class="form-group">
+ <div class="form-group">
       {{Form::label('firstname', 'First name')}}
-      {{Form::text('firstname','',['class'=>'form-control','placeholder'=>'First name']) }}
+      {{Form::text('firstname','',['class'=>'form-control']) }}
     </div>
 
 <div class="form-group">
       {{Form::label('lastname', 'Last name')}}
-      {{Form::text('lastname','',['class'=>'form-control','placeholder'=>'Last name']) }}
+      {{Form::text('lastname','',['class'=>'form-control' ]) }}
     </div>
-
+{{-- 
 <div class="form-group">
       {{Form::label('body', 'Discriptions')}}
-      {{Form::textarea('body','',['class'=>'form-control','placeholder'=>'Discriptions','id'=>'article-ckeditor']) }}
+      {{Form::textarea('body','',['class'=>'form-control' ,'id'=>'article-ckeditor']) }}
     </div>
 
 <div class="form-group">
       
       {{Form::file('post_image','',['class'=>'form-control' ]) }}
     </div>   --}}
-
-{{Form::submit('Create' ) }}
+ 
+{{Form::submit('Create',['class'=>'btn btn-primary btn-lg' ] ) }}
 
    </div>
 
