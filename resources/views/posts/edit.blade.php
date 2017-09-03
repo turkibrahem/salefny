@@ -34,7 +34,7 @@
     </div>
 <div class="form-group">
       
-      {{Form::file('post_image' ,['class'=>'btn' ]) }}
+      {{Form::file('post_image'  ,['class'=>'btn' ]) }}
     </div> 
  
 {{Form::hidden('_method' ,'PUT') }}
