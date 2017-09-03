@@ -10,7 +10,7 @@
    <div class=container>
 <div class="form-group">
       {{Form::label('subject', 'Subject')}}
-      {{Form::text('subject','' ) }}
+      {{Form::text('subject','' , ['class'=>'form-control'] ) }}
     </div>
 {{--  <div class="form-group">
       {{Form::label('firstname', 'First name')}}
