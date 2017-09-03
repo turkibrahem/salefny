@@ -1,13 +1,10 @@
-Hello
-
-
-{{--  @extends('layout.app')
+@extends('layout.app')
            
            
             @section('content')
-            
+            Hi
                 
- {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
+ {{--  {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
    
    <div class=container>
    <div class="panel panel-warning">
@@ -46,11 +43,11 @@ Hello
   </div>
 </div>
 </div>
-{!! Form::close() !!}
+{!! Form::close() !!}  --}}
 
            @endsection
 
-  --}}
+
 
  
 
