@@ -4,7 +4,7 @@
             @section('content')
             
                 
- {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST']) !!}
+ {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
    
    <div class=container>
    <div class="panel panel-warning">
@@ -33,7 +33,10 @@
       {{Form::textarea('body','',['class'=>'form-control','placeholder'=>'Discriptions','id'=>'article-ckeditor']) }}
     </div>
 
- 
+<div class="form-group">
+      
+      {{Form::file('post_image','',['class'=>'form-control' ]) }}
+    </div> 
 
 {{Form::submit('Create',['class'=>"btn btn-primary btn-lg"]) }}
 

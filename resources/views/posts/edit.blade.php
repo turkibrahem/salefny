@@ -4,7 +4,7 @@
             @section('content')
             
                 
- {!! Form::open(['action' => ['PostsController@update',$post->id], 'method'=>'POST']) !!}
+ {!! Form::open(['action' => ['PostsController@update',$post->id], 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
    
    <div class=container>
    <div class="panel panel-warning">
@@ -32,7 +32,10 @@
       {{Form::label('body', 'Discriptions')}}
       {{Form::textarea('body',$post->body,['class'=>'form-control','placeholder'=>'Discriptions','id'=>'article-ckeditor']) }}
     </div>
-
+<div class="form-group">
+      
+      {{Form::file('post_image','',['class'=>'form-control' ]) }}
+    </div> 
  
 {{Form::hidden('_method' ,'PUT') }}
 {{Form::submit('Update',['class'=>"btn btn-primary btn-lg"]) }}

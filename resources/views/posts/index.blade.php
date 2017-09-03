@@ -20,7 +20,14 @@
   </div>
   <div class="panel-body">
     <h2> {{$post->subject}}</h2> 
-   <span class="label label-danger">created at : {{$post->created_at}}</span>
+
+ <img src="/storage/post_image/{{$post->post_image}}" class="img-thumbnail" alt="{{$post->post_image}}" style="width:50%,height:50%" > 
+
+
+
+   <span class="label label-danger">created at : {{$post->created_at}}  </span>
+     <span class="label label-info">  by {{$post->user->name}}</span>
+
    <a class="pull-right" href="/posts/{{$post->id}}" class="btn btn-warning">More</a>
   </div>
 </div>
