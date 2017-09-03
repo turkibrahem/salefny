@@ -42,16 +42,16 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' =>  'us-cdbr-iron-east-05.cleardb.net',
-            'port' => env('DB_PORT', '3306'),
+            
             'database' => 'heroku_3fc49f2a7a07bbe',
             'username' => 'b076776c340d9e',
             'password' => '269c3566',
-            'unix_socket' => env('DB_SOCKET', ''),
+             
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
-            'strict' => true,
-            'engine' => null,
+            'strict' => false,
+             
         ],
 
         'pgsql' => [
