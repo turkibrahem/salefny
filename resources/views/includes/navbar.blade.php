@@ -1,119 +1,64 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Muhammed Essa</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li ><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/prolanguage">Programming Language</a></li>
-      
-    </ul>
+ 
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
 
-  <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login" target="_blank">Login</a></li>
-            <li><a href="/register" target="_blank">Register</a></li>
-          </ul>
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-  </div>
-</nav>
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                         Muhammed Essa 
+                    </a>
+                </div>
 
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                          <li ><a href="/">Home</a></li>
+                          <li><a href="/about">About</a></li>
+                          <li><a href="/posts">Posts</a></li>
+                          <li><a href="/posts/create"  >Create post</a></li>
+                    </ul>
 
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 
 
 
  
- 
-<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-
-
-
-
-
- 
-
- <div id="mycarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#mycarousel" data-slide-to="1"></li>
-    <li data-target="#mycarousel" data-slide-to="2"></li>
- 
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="/img/11.png" data-color="lightblue" alt="First Image"  >
-      <div class="carousel-caption mycolor4">
-        <h2 class="myfonty">
- This is test 1
-        
-        </h2>
-      </div>
-    </div>
-    <div class="item">
-      <img src="/img/12.png" data-color="firebrick" alt="Second Image" >
-      <div class="carousel-caption mycolor4">
-        <h2 class="myfonty">
- This is test 2        
-        </h2>
-      </div>
-    </div>
-    <div class="item">
-      <img src="/img/13.png" data-color="violet" alt="Third Image">
-      <div class="carousel-caption mycolor4">
-        <h2 class="myfonty">
- This is test 3        </h2>
-      </div>
-    </div>
-    
-    
-  </div>
-
-  <!-- Controls -->
- 
-</div>
-
-<style>
-
-.carousel-caption h1, .carousel-caption h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption h5, .carousel-caption h6{
- color:#000;
-  
- }
- 
-.p {
-  text-align: center;
-  padding-top: 40px;
-  font-size: 13px;
-}
-
-.carousel-inner .item{ 
-   height:500px; 
-   background-size:cover;
-   background-position: center center;
-}
-
-.carousel-indicators li {
-    background: #ccc;
-}
-
-.carousel-indicators .active {
-    background: #CF000F;
-}
-
-
-</style>
-<script>
-$('.carousel').carousel({
-  interval: 2000,
-  pause: "false"
-});
-</script>
- 
-
-
