@@ -4,7 +4,7 @@
             @section('content')
            
            
-{!! Form::open(['url' => 'foo/bar']) !!}
+{!! Form::open(['action' => 'PostsController@store', 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
  
 {!! Form::close() !!}
  
