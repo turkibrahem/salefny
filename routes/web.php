@@ -24,3 +24,7 @@ Route::get('/about', 'PagesController@about');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('home');
+
+
+Route::get('get-file', 'CloudderController@getFile');
+Route::post('upload-file', ['as'=>'upload-file','uses'=>'CloudderController@uploadFile']);

@@ -61,15 +61,39 @@ class PostsController extends Controller
          'post_image'=>'image|nullable|max:1024',
         ]);
 
-if($request->hasFile('post_image')){
+
+        if($request->hasFile('post_image')){  
+
     $filenameWithExtention = $request->file('post_image')->getClientOriginalName();
     $fileName = pathinfo($filenameWithExtention,PATHINFO_FILENAME);
     $extension = $request->file('post_image')->getClientOriginalExtension();
     $fileNameStore = $fileName .'_'.time().'.'.$extension;
-    $path = $request->file('post_image')->storeAs('public/post_image',$fileNameStore);
-}else{
-    $fileNameStore = 'noImage.jpg';
-}
+
+    $path = $request->file('post_image')->move(base_path() . '/public/images/', $fileNameStore);
+  
+ 
+            
+        }else{
+                $fileNameStore = 'noImage.jpg';
+              }
+
+
+
+
+// if($request->hasFile('post_image')){
+//     $filenameWithExtention = $request->file('post_image')->getClientOriginalName();
+//     $fileName = pathinfo($filenameWithExtention,PATHINFO_FILENAME);
+//     $extension = $request->file('post_image')->getClientOriginalExtension();
+//     $fileNameStore = $fileName .'_'.time().'.'.$extension;
+//     $path = $request->file('post_image')->storeAs('public/post_image',$fileNameStore);
+// }else{
+//     $fileNameStore = 'noImage.jpg';
+// }
+
+
+
+
+
  
 $post = new Post;
 $post->subject   = $request->input('subject');

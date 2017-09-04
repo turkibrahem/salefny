@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
+        'JD\Cloudder\CloudderServiceProvider',
 
         /*
          * Package Service Providers...
@@ -193,6 +194,7 @@ return [
     */
 
     'aliases' => [
+        'Cloudder' => 'JD\Cloudder\Facades\Cloudder' ,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -229,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+         
 
     ],
 
