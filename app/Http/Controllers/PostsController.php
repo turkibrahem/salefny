@@ -76,10 +76,7 @@ class PostsController extends Controller
         }else{
                 $fileNameStore = 'noImage.jpg';
               }
-
-
-
-
+ 
 // if($request->hasFile('post_image')){
 //     $filenameWithExtention = $request->file('post_image')->getClientOriginalName();
 //     $fileName = pathinfo($filenameWithExtention,PATHINFO_FILENAME);
@@ -160,7 +157,9 @@ $post->save();
             $fileName = pathinfo($filenameWithExtention,PATHINFO_FILENAME);
             $extension = $request->file('post_image')->getClientOriginalExtension();
             $fileNameStore = $fileName .'_'.time().'.'.$extension;
-            $path = $request->file('post_image')->storeAs('public/post_image',$fileNameStore);
+          
+            $path = $request->file('post_image')->move(base_path() . '/public/images/', $fileNameStore);
+            // $path = $request->file('post_image')->storeAs('public/post_image',$fileNameStore);
         } 
         $post =   Post::find($id);
         $post->subject   = $request->input('subject');
@@ -190,7 +189,8 @@ $post->save();
 
 
 if($post->post_image != 'noImage.jpg'){
-    Storage::delete('public/post_image/'.$post->post_image);
+    Storage::delete('public/images/'.$post->post_image);
+ 
 }
 
 

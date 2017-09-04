@@ -26,8 +26,12 @@
 @endif
 @endif
 
- <img src="/storage/post_image/{{$post->post_image}}" class="img-thumbnail" alt="{{$post->post_image}}" style="width:100%,height:50%" > 
+ {{--  <img src="/storage/post_image/{{$post->post_image}}" class="img-thumbnail" alt="{{$post->post_image}}" style="width:100%,height:50%" >   --}}
   
+ <img src="{{ URL::to('/') }}/images/{{$post->post_image}}" class="img-thumbnail" alt="{{$post->post_image}}" style="width:50%,height:50%" > 
+
+
+
   
     <h2> {{$post->subject}}</h2> 
      <p> {!!$post->body!!}</p>
