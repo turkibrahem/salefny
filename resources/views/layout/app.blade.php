@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Muhammed Essa</title>
+        <title> Welcome</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -21,12 +21,7 @@
 
 
 <style>
-.navbar.navbar-inverse {
-    
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
  
 
 </style>
@@ -37,7 +32,7 @@
     </head>
     
     <body>
-      
+
       @include('includes.navbar')
       @include('includes.messages')
  @yield('content')
@@ -47,6 +42,6 @@
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
- 
+
     </body>
 </html>

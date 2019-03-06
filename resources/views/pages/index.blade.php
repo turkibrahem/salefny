@@ -7,7 +7,7 @@
             <div class="content">
                 <div class="title m-b-md">
                 <div class="container">
-                  Muhammed Essa
+                  Esraa
                 </div></div>
             </div>
                @endsection

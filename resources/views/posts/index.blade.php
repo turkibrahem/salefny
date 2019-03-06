@@ -1,8 +1,9 @@
 @extends('layout.app')
+
            
            
             @section('content')
-            <div class="content">
+            <div class="content" >
                 <div class="container">
                 <h1>Posts</h1>
 
@@ -10,7 +11,7 @@
 
 
             
- <div class="row container">
+ <div class="row container" >
     @foreach($posts as $post)
   <div class="col-sm-4">
   
@@ -29,7 +30,7 @@
    <span class="label label-danger">created at : {{$post->created_at}}  </span>
      <span class="label label-info">  by {{$post->user->name}}</span>
 
-   <a class="pull-right" href="/posts/{{$post->id}}" class="btn btn-warning">More</a>
+   <a class="pull-right" href="/salefny/public/posts/{{$post->id}}" class="btn btn-warning">More</a>
   </div>
 </div>
   

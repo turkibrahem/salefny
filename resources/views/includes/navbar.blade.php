@@ -1,5 +1,10 @@
- 
-        <nav class="navbar navbar-inverse navbar-static-top">
+<style>
+    .esraa{
+        background-color:#0c01209d;
+    }
+</style>
+
+        <nav class="navbar navbar-inverse navbar-static-top esraa">
             <div class="container">
                 <div class="navbar-header">
 
@@ -12,18 +17,16 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                         Muhammed Essa 
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                         Salefny
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                          <li ><a href="/">Home</a></li>
-                          <li><a href="/about">About</a></li>
-                          <li><a href="/posts">Posts</a></li>
-                          <li><a href="/posts/create"  >Create post</a></li>
+                          <li><a href="/salefny/public/posts">Posts</a></li>
+                          <li><a href="/salefny/public/posts/create"  >Create post</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -40,7 +43,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
 
-                   <li><a href="/dashboard">Dashboard</a></li>              
+                   <li><a href="/salefny/public/dashboard">Dashboard</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

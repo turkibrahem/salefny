@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> Muhammed Essa </title>
+    <title> Profile </title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -26,12 +26,7 @@
 
 
 <style>
-.navbar.navbar-inverse {
-    
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
  
 
 </style>

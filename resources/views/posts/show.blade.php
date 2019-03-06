@@ -11,7 +11,7 @@
    @if(!Auth::guest())
    @if(Auth::user()->id == $post->user_id)
 
-    <a class="pull-right" href="/posts/{{$post->id}}/edit" class="btn btn-warning">Edit</a>
+    <a class="pull-right" href="/salefny/public//posts/{{$post->id}}/edit" class="btn btn-warning">Edit</a>
 
 
   
@@ -39,7 +39,7 @@
  <span class="label label-info">  by {{$post->user->name}}</span>
 
   </div>
-  <a class="pull-right" href="/posts" class="btn btn-warning">Back</a>
+  <a class="pull-right" href="/salefny/public/posts" class="btn btn-warning">Back</a>
 </div>
 
 

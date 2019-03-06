@@ -58,7 +58,7 @@ class PostsController extends Controller
          'firstname'=>'required',
          'lastname'=>'required',
          'body'=>'required',
-         'post_image'=>'image|nullable|max:1024',
+         'post_image'=>'image',
         ]);
 
 
@@ -76,22 +76,9 @@ class PostsController extends Controller
         }else{
                 $fileNameStore = 'noImage.jpg';
               }
- 
-// if($request->hasFile('post_image')){
-//     $filenameWithExtention = $request->file('post_image')->getClientOriginalName();
-//     $fileName = pathinfo($filenameWithExtention,PATHINFO_FILENAME);
-//     $extension = $request->file('post_image')->getClientOriginalExtension();
-//     $fileNameStore = $fileName .'_'.time().'.'.$extension;
-//     $path = $request->file('post_image')->storeAs('public/post_image',$fileNameStore);
-// }else{
-//     $fileNameStore = 'noImage.jpg';
-// }
 
 
 
-
-
- 
 $post = new Post;
 $post->subject   = $request->input('subject');
 $post->firstname = $request->input('firstname');

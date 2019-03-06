@@ -10,12 +10,12 @@ class PagesController extends Controller
 
     public function index(){
         $name= 'index';
-        return view('pages.index')->with('name',$name );
+        return view('home')->with('name',$name );
     }
 
     function about() {
         $name= 'about';
-        return view('pages.about')->with('name',$name );
+        return view('about')->with('name',$name );
       }
 
       function proLanguage() {

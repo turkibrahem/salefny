@@ -16,9 +16,9 @@
                         </div>
                     @endif
 
-                   <a href="/posts/create" class="btn btn-primary btn-lg">New post !</a>
-                
-                
+                   <a href="{{ URL::to('/posts/create')}}" class="btn btn-primary btn-lg">New post !</a>
+
+
                 <hr>
                 @foreach($posts as $post)
                 <div class="panel panel-success">
@@ -31,7 +31,7 @@
   
                     </div>
     <div class="panel-footer">
-     <a   href="/posts/{{$post->id}}/edit" class="btn btn-primary  ">Edit</a>
+     <a   href="/salefny/public/posts/{{$post->id}}/edit" class="btn btn-primary  ">Edit</a>
   
   {!! Form::open(['action' => ['PostsController@destroy',$post->id], 'method'=>'POST']) !!}
   {{Form::hidden('_method' ,'DELETE') }}
